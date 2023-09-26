@@ -14,42 +14,16 @@ But the function `attach()` is different:
 bool attach(
     int pin,
     int channel = CHANNEL_NOT_ATTACHED,
-    int minAngle = DEFAULT_MIN_ANGLE,
-    int maxAngle = DEFAULT_MAX_ANGLE,
-    int minPulseWidthUs = DEFAULT_MIN_PULSE_WIDTH_US,
-    int maxPulseWidthUs = DEFAULT_MAX_PULSE_WIDTH_US,
-    int frequency = DEFAULT_FREQUENCY
+    int minAngle = MIN_ANGLE,
+    int maxAngle = MAX_ANGLE,
+    int minPulseWidth = MIN_PULSE_WIDTH,
+    int maxPulseWidth = MAX_PULSE_WIDTH
 );
 ```
 
-More information in [source code documentation](src/Servo.h).
+More information in [source code documentation](https://github.com/RoboticsBrno/ESP32-Arduino-Servo-Library/blob/master/src/Servo.h#L73).
 
 Example: [04-SimpleServoAngles](examples/04-SimpleServoAngles/04-SimpleServoAngles.ino)
-
-There are also a ServoFloat and ServoDouble variant available. Use one of these when working in radians. 
-
-Example: : [05-SimpleServoRadians](examples/05-SimpleServoRadians/05-SimpleServoRadians.ino)
-
-### IMPORTANT INFO
-According testings, the frequency for ESP32 S2/S3/C3 has to be set at least to 200 Hz. Here is an example, how to set just frequency:
-
-```cpp
-Servo servo1;
-const int servoPin = 4;
-const int frequency = 200; // Hz
-
-servo1.attach(
-    servoPin, 
-    Servo::CHANNEL_NOT_ATTACHED, 
-    Servo::DEFAULT_MIN_ANGLE, 
-    Servo::DEFAULT_MAX_ANGLE, 
-    Servo::DEFAULT_MIN_PULSE_WIDTH_US, 
-    Servo::DEFAULT_MAX_PULSE_WIDTH_US, 
-    frequency
-);
-```
-
-For more information look at the [PR25](https://github.com/RoboticsBrno/ServoESP32/pull/25) 
 
 ## PlatformIO
 

@@ -1,5 +1,5 @@
-#include <Servo.h>
 #include <Arduino.h>
+#include <Servo.h>
 
 static const int servoPin = 4;
 
