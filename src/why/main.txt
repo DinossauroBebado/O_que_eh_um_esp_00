@@ -1,0 +1,15 @@
+Boards	              | Arduino	       |ESP32
+CPU	                  | ATmega328P     | 	Tensilica Xtensa LX6
+RAM                   |	2KB            |	520KB
+Internet Connectivity |	Ethernet Shield|	both Built-in WIFI & Ethernet port
+Bluetooth Connectivity|	not present    |	present
+Software              |	C/C++ languages|micro python, Python, C, C++
+Operating System      |	No	Required   |(Raspbian (Debian-based), Ubuntu)
+Operating Voltage     |	5v	           |3.3v
+Operating Frequency   |	16 MHz	       |Up to 240 MHz
+Flash Memory          |	32 KB	       |Typically 4MB (can vary)
+Cost                  |	cheaper        |expensive
+Family                |	Atmega Family  |	ESP Family
+Ease of use	          | Easy           |	Complex and Hard to learn for beginners
+GPIO                  |	14             |	34
+Analog Input Pins     |	6              |	18
